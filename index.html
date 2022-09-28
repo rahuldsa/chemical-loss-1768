@@ -1,12 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <p>hello world</p>
-</body>
+    <style>
+      #main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 2px solid green;
+        width: 80%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* height: 1000px; */
+        margin: auto;
+        gap: 10px;
+      }
+      #main div {
+        border: 2px solid pink;
+      }
+      #main div img {
+        width: 90%;
+      }
+      .topnav {
+        background-color: skyblue;
+        overflow: hidden;
+      }
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Create a right-aligned (split) link inside the navigation bar */
+      .topnav a.split {
+        float: right;
+        background-color: #04aa6d;
+        color: white;
+      }
+      #more_btn {
+        background-color: red;
+        align-items: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/index.html">IDEAKART</a>
+      <a href="#signup" class="split">Sign Up</a>
+      <a href="#signin" class="split">Sign In</a>
+      <a href="#contact" class="split">Contact</a>
+      <a href="/about.html" class="split">About</a>
+    </div>
+
+    <div id="main"></div>
+
+    <!-- <div class="main">
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51cZLY0BzZL.jpg"
+          alt=""
+        />
+        <p>
+          Economic Survey and Budget 2018 <br />
+          250.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51q%2Bdbo74CL.jpg"
+          alt=""
+        />
+        <p>
+          Wanderings in West Africa, Vol. 2 of 2: From Liverpool to Fernando Po
+          (Classic Reprint) <br />
+          1099.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/41y0wp5n5RL.jpg"
+          alt=""
+        />
+        <p>
+          The Shape of Things to Come: An Impassioned View <br />
+          352.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51bCR3YK%2B-L.jpg"
+          alt=""
+        />
+        <p>
+          Frcem Intermediate: Short Answer Question Third Edition, Volume 1 in
+          Full Colour <br />
+          4628.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51jiJMo3uJL.jpg"
+          alt=""
+        />
+        <p>
+          The Transformational Power of Sound and Music: A Handbook for Sound
+          Healers and Musicians
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51%2BhMiZwH6L.jpg"
+          alt=""
+        />
+        <p>
+          Flashback Four #3: The Pompeii Disaster <br />
+          451.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51jWFhGeDCL.jpg"
+          alt=""
+        />
+        <p>
+          Blood, fire, death: The Swedish Metal Story (Extreme Metal) <br />
+          1662.0
+        </p>
+        <button>View Now</button>
+        <button>More details</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/41XnqXv5R%2BL.jpg"
+          alt=""
+        />
+        <p>
+          The State of Affairs: Rethinking Infidelity <br />
+          984.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/514gCeerylL.jpg"
+          alt=""
+        />
+        <p>
+          Guide to English & Logical Reasoning for BITSAT with past 6 Year
+          Solved Papers <br />
+          278.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51DL6orYTAL.jpg"
+          alt=""
+        />
+        <p>
+          Lonely Planet Kids The Cities Activity Book <br />
+          585.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/41tDTOy4-FL.jpg"
+          alt=""
+        />
+        <p>
+          The Undoing Dance: You Will Be Seduced Completely <br />
+          337.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51uZOsaDCJL.jpg"
+          alt=""
+        />
+        <p>
+          Heaven's Gates and Hell's Flames: A Sociological Study of New
+          Christian Movements in Contemporary Goa <br />
+          1166.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51Q-TY8lX0L.jpg"
+          alt=""
+        />
+        <p>
+          The Principled Principal: 10 Principles for Leading Exceptional
+          Schools <br />
+          1377.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51gKmuBVmXL.jpg"
+          alt=""
+        />
+        <p>
+          Jag Darshan Ka Mela <br />
+          256.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51Xjzum%2BQiL.jpg"
+          alt=""
+        />
+        <p>
+          COPA90, Our World Cup (World Cup Russia 2018) <br />
+          374.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51bb6P3OFEL.jpg"
+          alt=""
+        />
+        <p>
+          Thriving With Adult ADHD: Skills to Strengthen Executive Functioning
+          <br />
+          1166.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/6178GxIRmFL.jpg"
+          alt=""
+        />
+        <p>
+          Everyday Ubuntu: Living better together, the African way <br />
+          467.22
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51j-Szm7OhL.jpg"
+          alt=""
+        />
+        <p>
+          Griezmann (Ultimate Football Heroes) <br />
+          771.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/51hPM2xKNlL.jpg"
+          alt=""
+        />
+        <p>
+          A Gift of Passion: Wrapped in Run <br />
+          199.0
+        </p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+      <div>
+        <img
+          src="https://images-eu.ssl-images-amazon.com/images/I/5122qa-i5NL.jpg"
+          alt=""
+        />
+        <p>Beginning Programming with Python For Dummies 1688.0</p>
+        <button>More details</button>
+        <button>View Now</button>
+      </div>
+    </div> -->
+
+    <div>
+      <ul>
+        <h2>Get To Know Us</h2>
+        <a href="/about.html"><li>About</li> </a>
+        <li>Contact</li>
+        <li>Search</li>
+        <a href="privacy.html"><li>Privacy Policy</li></a>
+        <a href="/refund.html"><li>Refund Policy</li></a>
+        <a href="/earn.html"><li>Earn Money Online</li></a>
+        <li>QuickBuyer</li>
+      </ul>
+    </div>
+  </body>
 </html>
+<script>
+  let bookData = [
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51cZLY0BzZL.jpg",
+      details: " Economic Survey and Budget 2018",
+      price: 250.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51q%2Bdbo74CL.jpg",
+      details:
+        " Wanderings in West Africa, Vol. 2 of 2: From Liverpool to Fernando Po (Classic Reprint)",
+      price: 1099.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41y0wp5n5RL.jpg",
+      details: "The Shape of Things to Come: An Impassioned View",
+      price: 352.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51bCR3YK%2B-L.jpg",
+      details:
+        "Frcem Intermediate: Short Answer Question Third Edition, Volume 1 in Full Colour",
+      price: 4628.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51jiJMo3uJL.jpg",
+      details:
+        "The Transformational Power of Sound and Music: A Handbook for Sound Healers and Musicians",
+      price: 100,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51jWFhGeDCL.jpg",
+      details: " Blood, fire, death: The Swedish Metal Story (Extreme Metal)",
+      price: 1662.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51%2BhMiZwH6L.jpg",
+      details: " Flashback Four #3: The Pompeii Disaster ",
+      price: 451.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41XnqXv5R%2BL.jpg",
+      details: " The State of Affairs: Rethinking Infidelity",
+      price: 984.0,
+    },
+
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/514gCeerylL.jpg",
+      details:
+        " Guide to English & Logical Reasoning for BITSAT with past 6 Year Solved Papers",
+      price: 100,
+    },
+
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41XnqXv5R%2BL.jpg",
+      details: " The State of Affairs: Rethinking Infidelity ",
+      price: 984.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/514gCeerylL.jpg",
+
+      details:
+        "  Guide to English & Logical Reasoning for BITSAT with past 6 Year Solved Papers",
+      price: 278.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51DL6orYTAL.jpg",
+      details: " Lonely Planet Kids The Cities Activity Book",
+      price: 585.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41tDTOy4-FL.jpg",
+      details: "The Undoing Dance: You Will Be Seduced Completely",
+      price: 337.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51uZOsaDCJL.jpg",
+      details:
+        "Heaven's Gates and Hell's Flames: A Sociological Study of New Christian Movements in Contemporary Goa",
+      price: 1166.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51Q-TY8lX0L.jpg",
+      details:
+        " The Principled Principal: 10 Principles for Leading Exceptional Schools",
+      price: 1377.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51gKmuBVmXL.jpg",
+      details: " Jag Darshan Ka Mela",
+      price: 256.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51Xjzum%2BQiL.jpg",
+
+      details: " COPA90, Our World Cup (World Cup Russia 2018) ",
+      price: 374.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51bb6P3OFEL.jpg",
+      details:
+        " Thriving With Adult ADHD: Skills to Strengthen Executive Functioning",
+      price: 1166.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/6178GxIRmFL.jpg",
+      details: "Everyday Ubuntu: Living better together, the African way",
+      price: 467.22,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51j-Szm7OhL.jpg",
+      details: " Griezmann (Ultimate Football Heroes)",
+      price: 771.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51hPM2xKNlL.jpg",
+      details: "A Gift of Passion: Wrapped in Run",
+      price: 199.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/5122qa-i5NL.jpg",
+      details: "Beginning Programming with Python For Dummies",
+      price: 1688.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41d6qX3SV0L.jpg",
+      details: "Learning C# 7 By Developing Games",
+      price: 721.0,
+    },
+    {
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41q95lsdDGL.jpg",
+      details: "Superhumanity: Design of the Self (None)",
+      price: 2354.42,
+    },
+  ];
+
+  let div = document.getElementById("main");
+
+  function renderDOM(bookData) {
+    bookData.forEach(function (ele, index) {
+      let div2 = document.createElement("div");
+
+      let image = document.createElement("img");
+      image.setAttribute("src", ele.img);
+      let details = document.createElement("p");
+      details.innerText = ele.details;
+      let price = document.createElement("p");
+      price.innerText = ele.price;
+
+      let button = document.createElement("btn");
+      button.innerText = "View More";
+      button.setAttribute("id", "view_btn");
+
+      let button1 = document.createElement("btn1");
+      button1.innerText = "More Details";
+      button1.setAttribute("id", "more_btn");
+
+      div2.append(image, details, price, button, button1);
+      div.append(div2);
+    });
+  }
+  renderDOM(bookData);
+</script>
