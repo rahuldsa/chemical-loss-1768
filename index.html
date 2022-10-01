@@ -49,21 +49,59 @@
         background-color: #04aa6d;
         color: white;
       }
+      #view_btn {
+        /* background-color: red; */
+        color: skyblue;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        text-align: center;
+        width: 50%;
+        float: left;
+        cursor: pointer;
+      }
+      #view_btn > cursor :hover {
+        background-color: darkblue;
+      }
       #more_btn {
-        background-color: red;
-        align-items: left;
+        /* background-color: red; */
+        color: skyblue;
+        width: 50%;
+        float: right;
+        padding-left: 10px;
+        line-height: 20px;
+        margin-bottom: 0;
+        /* margin-top: 10px; */
+        text-align: center;
+        cursor: pointer;
+      }
+      .footer {
+        /* background-color: red; */
+        width: 20%;
+        margin-left: 150px;
+      }
+      .footer li {
+        color: skyblue;
+        margin-left: 60px;
+      }
+      .footer h2 {
+        font-weight: 100;
+      }
+      h1 {
+        margin-left: 150px;
+        font-weight: 100;
       }
     </style>
   </head>
   <body>
     <div class="topnav">
       <a href="/index.html">IDEAKART</a>
-      <a href="#signup" class="split">Sign Up</a>
-      <a href="#signin" class="split">Sign In</a>
+      <a href="/signUp.html" class="split">Sign Up</a>
+      <a href="/signIn.html" class="split">Sign In</a>
       <a href="#contact" class="split">Contact</a>
       <a href="/about.html" class="split">About</a>
     </div>
-
+    <h1>Top Reads</h1>
     <div id="main"></div>
 
     <!-- <div class="main">
@@ -312,7 +350,7 @@
       </div>
     </div> -->
 
-    <div>
+    <div class="footer">
       <ul>
         <h2>Get To Know Us</h2>
         <a href="/about.html"><li>About</li> </a>
