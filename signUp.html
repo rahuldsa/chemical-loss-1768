@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Bordered form */
+      /* form {
+        border: 3px solid #f1f1f1;
+      } */
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+      h1 {
+        margin-left: 150px;
+      }
+
+      /* Full-width inputs */
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #5cb85c;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+        border-radius: 10px;
+      }
+
+      /* Add a hover effect for buttons */
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+
+      /* Change styles for span and cancel button on extra small screens */
+      /* @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+        .cancelbtn {
+          width: 100%;
+        }
+      } */
+      .topnav {
+        background-color: skyblue;
+        overflow: hidden;
+      }
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Create a right-aligned (split) link inside the navigation bar */
+      .topnav a.split {
+        float: right;
+        background-color: #04aa6d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/index.html">IDEAKART</a>
+      <a href="#signup" class="split">Sign Up</a>
+      <a href="#signin" class="split">Sign In</a>
+      <a href="#contact" class="split">Contact</a>
+      <a href="/about.html" class="split">About</a>
+    </div>
+    <h1>Sign up</h1>
+    <form>
+      <div class="container">
+        <label for="uname"><b>Name</b></label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter Name"
+          name="uname"
+          required
+        />
+
+        <label for="uname"><b>Mobile number</b></label>
+        <input
+          id="mobile"
+          type="text"
+          placeholder="Enter Mobile Number"
+          name="uname"
+          required
+        />
+
+        <label for="uname"><b>Email</b></label>
+        <input
+          id="holder"
+          type="text"
+          placeholder="Enter Email"
+          name="uname"
+          required
+        />
+
+        <label for="psw"
+          ><b>Password <i>(6 characters minimum)</i></b></label
+        >
+        <input
+          id="pass"
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <label for="psw"><b>Password confirmation</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label> -->
+        <br />
+        <br />
+        <button id="btn" type="submit">Sign up</button>
+      </div>
+    </form>
+  </body>
+</html>
+<script>
+  document.querySelector("#btn").addEventListener("click", signUp);
+  function signUp(event) {
+    event.preventDefault();
+
+    let name = document.querySelector("#name").value;
+    localStorage.setItem("name", JSON.stringify(name));
+
+    let mobileNumber = document.querySelector("#mobile").value;
+    localStorage.setItem("mobile", JSON.stringify(mobileNumber));
+
+    let emaild = document.querySelector("#holder").value;
+    localStorage.setItem("email", JSON.stringify(emaild));
+
+    let password = document.querySelector("#pass").value;
+    localStorage.setItem("password", JSON.stringify(password));
+
+    if (emaild == "") {
+      alert("Email Required");
+    } else if (password == "") {
+      alert("Password Required");
+    } else {
+      alert(" Congratulations : Sign-Up Successful");
+      document.querySelector("#holder").value = "";
+      document.querySelector("#pass").value = "";
+      window.location.href = "signIn.html";
+    }
+  }
+</script>

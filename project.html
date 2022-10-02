@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main_div {
+        display: flex;
+        height: 400px;
+        width: 75%;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 200px;
+        gap: 40px;
+      }
+      #image_div {
+        width: 20%;
+        height: 90%;
+        border: 1px solid blue;
+        margin-top: 25px;
+        margin-left: 15px;
+      }
+
+      #text_div {
+        width: 55%;
+        height: 65%;
+        margin-top: 100px;
+        border: 1px solid red;
+      }
+      #image{
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_div">
+      <div id="image_div">
+        <div id="image"></div>
+      </div>
+      <div id="text_div"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("data")) || [];
+
+  let img_div = document.createElement("div");
+  let image = document.createElement("img");
+  
+  image.src = data.img;
+
+  img_div.append(image);
+
+  document.getElementById("image").append(img_div);
+</script>

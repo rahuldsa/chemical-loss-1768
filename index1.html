@@ -1,0 +1,245 @@
+<!-- 
+  let bookData = [
+    {
+      brand: "Zebronics",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51cZLY0BzZL.jpg",
+      price: 250.0,
+      details: " Economic Survey and Budget 2018",
+      catagory: "Laptop",
+    },
+    {
+      brand: "Zebronics",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51q%2Bdbo74CL.jpg",
+      price: 1099.0,
+      details:
+        " Wanderings in West Africa, Vol. 2 of 2: From Liverpool to Fernando Po (Classic Reprint)",
+      catagory: "Mobile",
+    },
+    {
+      brand: "Zebronics",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41y0wp5n5RL.jpg",
+      price: 352.0,
+      details: "The Shape of Things to Come: An Impassioned View",
+      catagory: "Head Phones",
+    },
+    {
+      brand: "Zebronics",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51bCR3YK%2B-L.jpg",
+      price: 4628.0,
+      details:
+        "  Frcem Intermediate: Short Answer Question Third Edition, Volume 1 in Full Colour",
+      catagory: "Speakers",
+    },
+    {
+      brand: "Zebronics",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51jiJMo3uJL.jpg",
+      price: 100,
+      details:
+        "    The Transformational Power of Sound and Music: A Handbook for Sound Healers and Musicians",
+      catagory: "Smart TV",
+    },
+    {
+      brand: "Apple",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51jWFhGeDCL.jpg",
+      price: 1662.0,
+      details: " Blood, fire, death: The Swedish Metal Story (Extreme Metal)",
+      catagory: "Laptop",
+    },
+    {
+      brand: "Apple",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51%2BhMiZwH6L.jpg",
+      price: 451.0,
+      details: " Flashback Four #3: The Pompeii Disaster ",
+      catagory: "Mobile",
+    },
+    {
+      brand: "Apple",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41XnqXv5R%2BL.jpg",
+      price: 984.0,
+      details: " The State of Affairs: Rethinking Infidelity",
+      catagory: "LaptopHead Phones",
+    },
+    {
+      brand: "Apple",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/z/b/zb_8906108615899_1_44867a4c.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Speakers",
+    },
+    {
+      brand: "Apple",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/514gCeerylL.jpg",
+      price: 100,
+      details:
+        " Guide to English & Logical Reasoning for BITSAT with past 6 Year Solved Papers",
+      catagory: "Smart TV",
+    },
+    {
+      brand: "HP",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/g/r/grey_1_398b5873.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Laptop",
+    },
+    {
+      brand: "HP",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/b/o/boult-audio-ba-nk-freepods-black_1_17c2dc71.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Mobile",
+    },
+    {
+      brand: "HP",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/d/i/dive_green_1.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Head Phones",
+    },
+    {
+      brand: "HP",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/p/e/pebble-8906086572115_1_34a9b9fd.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Speakers",
+    },
+    {
+      brand: "HP",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/p/p/pportronics-por-1195_1_e9dc8e9f.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Smart TV",
+    },
+    {
+      brand: "Dell",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/m/u/musebud_grey.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Laptop",
+    },
+    {
+      brand: "Dell",
+      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/n/y/nyfboat000113_1_cc965b26.jpg?rnd=20200526195200",
+      price: 100,
+      details:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sequi.",
+      catagory: "Mobile",
+    },
+    {
+      brand: "Dell",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41XnqXv5R%2BL.jpg",
+      price: 984.0,
+      details: " The State of Affairs: Rethinking Infidelity ",
+      catagory: "Head Phones",
+    },
+    {
+      brand: "Dell",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/514gCeerylL.jpg",
+      price: 278.0,
+      details:
+        "  Guide to English & Logical Reasoning for BITSAT with past 6 Year Solved Papers",
+      catagory: "Speakers",
+    },
+    {
+      brand: "Dell",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51DL6orYTAL.jpg",
+      price: 585.0,
+      details: " Lonely Planet Kids The Cities Activity Book",
+      catagory: "Smart TV",
+    },
+    {
+      brand: "Vivo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/41tDTOy4-FL.jpg",
+      price: 337.0,
+      details: "The Undoing Dance: You Will Be Seduced Completely",
+      catagory: "Laptop",
+    },
+    {
+      brand: "Vivo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51uZOsaDCJL.jpg",
+      price: 1166.0,
+      details:
+        "     Heaven's Gates and Hell's Flames: A Sociological Study of New Christian Movements in Contemporary Goa",
+      catagory: "Mobile",
+    },
+    {
+      brand: "Vivo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51Q-TY8lX0L.jpg",
+      price: 1377.0,
+      details:
+        " The Principled Principal: 10 Principles for Leading Exceptional Schools",
+      catagory: "Head Phones",
+    },
+    {
+      brand: "Vivo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51gKmuBVmXL.jpg",
+      price: 256.0,
+      details: " Jag Darshan Ka Mela",
+      catagory: "Speakers",
+    },
+    {
+      brand: "Vivo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51Xjzum%2BQiL.jpg",
+      price: 374.0,
+      details: " COPA90, Our World Cup (World Cup Russia 2018) ",
+      catagory: "Smart TV",
+    },
+    {
+      brand: "Oppo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51bb6P3OFEL.jpg",
+      price: 1166.0,
+      details:
+        " Thriving With Adult ADHD: Skills to Strengthen Executive Functioning",
+      catagory: "Laptop",
+    },
+    {
+      brand: "Oppo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/6178GxIRmFL.jpg",
+      price: 467.22,
+      details: "Everyday Ubuntu: Living better together, the African way",
+      catagory: "Mobile",
+    },
+    {
+      brand: "Oppo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51j-Szm7OhL.jpg",
+      price: 771.0,
+      details: " Griezmann (Ultimate Football Heroes)",
+      catagory: "Head Phones",
+    },
+    {
+      brand: "Oppo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/51hPM2xKNlL.jpg",
+      price: 199.0,
+      details: "A Gift of Passion: Wrapped in Run",
+      catagory: "Speakers",
+    },
+    {
+      brand: "Oppo",
+      img: "https://images-eu.ssl-images-amazon.com/images/I/5122qa-i5NL.jpg",
+      price: 1688.0,
+      details: "Beginning Programming with Python For Dummies",
+      catagory: "Smart TV",
+    },
+  ];
+
+  let div = document.getElementById("parent");
+
+  function renderDOM(bookData) {
+   
+    bookData.forEach(function (ele, index) {
+      let div2 = document.createElement("div");
+      let image = document.createElement("img");
+      image.setAttribute("src", ele.img);
+      let brand = document.createElement("h1");
+      brand.innerText = ele.brand;
+      div2.append(image, brand);
+      div.append(div2);
+    });
+  }
+</script> -->

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.428571429;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        -webkit-transition: border-color ease-in-out 0.15s,
+          box-shadow ease-in-out 0.15s;
+        -o-transition: border-color ease-in-out 0.15s,
+          box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      }
+      .top {
+        display: flex;
+      }
+      .bottom {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>You can contact our team by filling this form</p>
+      <form>
+        <div class="top">
+          <input type="text" />
+          <label for="form_name">Firstname *</label>
+          <input
+            id="form_name"
+            type="text"
+            name="contact[name]"
+            class="form-control"
+            placeholder="Please enter your firstname *"
+            required="required"
+            data-error="Firstname is required."
+          />
+
+          <label for="form_lastname">Lastname *</label>
+          <input
+            id="form_lastname"
+            type="text"
+            name="contact[surname]"
+            class="form-control"
+            placeholder="Please enter your lastname *"
+            required="required"
+            data-error="Lastname is required."
+          />
+        </div>
+        <div class="bottom">
+          <label for="form_email">Email *</label>
+          <input
+            id="form_email"
+            type="email"
+            name="contact[email]"
+            class="form-control"
+            placeholder="Please enter your email *"
+            required="required"
+            data-error="Valid email is required."
+          />
+
+          <label for="form_phone">Phone</label>
+          <input
+            id="form_phone"
+            type="tel"
+            name="contact[phone]"
+            class="form-control"
+            placeholder="Please enter your phone"
+          />
+        </div>
+
+        <label for="form_message">Message *</label>
+        <textarea
+          id="form_message"
+          name="contact[message]"
+          class="form-control"
+          placeholder="Message for me *"
+          rows="4"
+          required="required"
+          data-error="Please,leave us a message."
+        ></textarea>
+        <input
+          type="submit"
+          class="btn btn-success btn-send"
+          value="Send message"
+        />
+      </form>
+    </div>
+  </body>
+</html>

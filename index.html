@@ -9,7 +9,7 @@
       #main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        border: 2px solid green;
+        /* border: 2px solid green; */
         width: 80%;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         /* height: 1000px; */
@@ -18,10 +18,27 @@
       }
       #main div {
         border: 2px solid pink;
+        border-radius: 10px;
       }
       #main div img {
         width: 90%;
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        
       }
+      /* #main div detail{
+        
+        margin-left: 25px;
+        margin-right: 25px;
+      } */
+      #main div p{
+        margin-left: 25px;
+        margin-right: 25px;
+        color: #219fd1;
+
+      }
+     
       .topnav {
         background-color: skyblue;
         overflow: hidden;
@@ -370,6 +387,7 @@
       img: "https://images-eu.ssl-images-amazon.com/images/I/51cZLY0BzZL.jpg",
       details: " Economic Survey and Budget 2018",
       price: 250.0,
+      
     },
     {
       img: "https://images-eu.ssl-images-amazon.com/images/I/51q%2Bdbo74CL.jpg",
@@ -505,10 +523,16 @@
   function renderDOM(bookData) {
     bookData.forEach(function (ele, index) {
       let div2 = document.createElement("div");
+      div2.addEventListener("click",function(){
+        localStorage.setItem("data",JSON.stringify(bookData[index]))
+        window.location.href="https://www.amazon.in/"
+       
+
+      })
 
       let image = document.createElement("img");
       image.setAttribute("src", ele.img);
-      let details = document.createElement("p");
+      let details = document.createElement("detail");
       details.innerText = ele.details;
       let price = document.createElement("p");
       price.innerText = ele.price;
@@ -516,6 +540,10 @@
       let button = document.createElement("btn");
       button.innerText = "View More";
       button.setAttribute("id", "view_btn");
+      // button.addEventListener("click",function(){
+      //    localStorage.setItem("data",JSON.stringify(bookData[index]))
+     
+      // })
 
       let button1 = document.createElement("btn1");
       button1.innerText = "More Details";
@@ -523,7 +551,21 @@
 
       div2.append(image, details, price, button, button1);
       div.append(div2);
+
+
     });
   }
   renderDOM(bookData);
+
+
+let data = JSON.parse(localStorage.getItem("")
+)
+
+
+
+
 </script>
+
+
+
+
